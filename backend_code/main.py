@@ -37,11 +37,11 @@ async def root():
 async def health_check():
     return {"status": "healthy", "service": "PlantOps Digital Twin API"}
 
-# For local development only
-if __name__ == "__main__":
-    uvicorn.run(
-        "main:app",
-        host="0.0.0.0",
-        port=8000,
-        reload=True
-    )
+# # For local development only
+# if __name__ == "__main__":
+#     uvicorn.run(
+#         "main:app",
+#         host="0.0.0.0",
+#         port=8000,
+#         reload=True
+#     )
