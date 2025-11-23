@@ -2,7 +2,6 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from app.routers import zones, simulation, chatops, analytics, chat
-from app.core.config import settings
 
 app = FastAPI(
     title="PlantOps Digital Twin API",
@@ -38,6 +37,7 @@ async def root():
 async def health_check():
     return {"status": "healthy", "service": "PlantOps Digital Twin API"}
 
+# For local development only
 if __name__ == "__main__":
     uvicorn.run(
         "main:app",
